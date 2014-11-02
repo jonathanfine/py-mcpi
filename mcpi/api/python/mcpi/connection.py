@@ -35,6 +35,11 @@ class Connection:
         #print "s",s
         self.drain()
         self.lastSent = s
+
+        # Convert Unicode s to bytes, to send to socket.  Use ascii
+        # codec because no evidence that Minecraft API accepts utf-8.
+        s = s.encode('ascii')
+
         self.socket.sendall(s)
 
     def receive(self):
