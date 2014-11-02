@@ -1,3 +1,9 @@
+# Python, Emacs, etc files to ignore.
 *~
 *.tar.gz
 *.pyc
+
+# Files to ignore from mcpi download.
+mcpi/minecraft-pi
+mcpi/data/
+*.jar
